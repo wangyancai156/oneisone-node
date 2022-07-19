@@ -1,0 +1,396 @@
+/* 搜索样式 */
+.search-pop {
+    position: fixed;
+    left    : 0;
+    top     : 0;
+    z-index : 100;
+    width   : 100%;
+    height  : 100%;
+    display : none;
+}
+
+.search-pop:before {
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: #000;
+    opacity         : 0.85;
+    filter          : alpha(opacity=85);
+    content         : '';
+}
+
+.search-pop .content {
+    position: relative;
+    z-index : 1;
+}
+
+.search-pop .ipt {
+    position: relative;
+}
+
+.search-pop .ipt i.fa {
+    position : absolute;
+    font-size: 20px;
+    color    : #fff;
+    left     : 20px;
+    top      : 15px;
+}
+
+.search-pop .ipt input {
+    padding              : 15px 15px 15px 60px;
+    background           : rgba(255, 255, 255, 0.3);
+    border               : 0;
+    display              : block;
+    width                : 100%;
+    outline              : none;
+    line-height          : 20px;
+    height               : 50px;
+    color                : #fff;
+    -webkit-border-radius: 25px;
+    -moz-border-radius   : 25px;
+    border-radius        : 25px;
+}
+
+.search-pop .close {
+    position : absolute;
+    right    : 20px;
+    top      : 20px;
+    z-index  : 2;
+    font-size: 30px;
+    color    : #fff;
+}
+
+/* 底部样式 */
+.footer {
+    padding         : 100px 0 30px;
+    background-color: #232323;
+    color           : #777;
+    font-size       : 12px;
+}
+
+.footer a {
+    color: #777;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer p {
+    line-height: 2;
+    margin     : 0 0 20px;
+}
+
+.footer .logo {
+    display      : inline-block;
+    margin-bottom: 20px;
+}
+
+.footer .logo img {
+    height: 100px;
+    width : auto;
+}
+
+.footer h6 {
+    font-size  : 16px;
+    color      : #fff;
+    margin     : 0;
+    line-height: 40px;
+}
+
+.footer ul {
+    margin    : 0;
+    list-style: none;
+    padding   : 0;
+}
+
+.footer li {
+    line-height: 38px;
+}
+
+.footer .btn {
+    padding              : 14px 40px;
+    color                : #fff;
+    background-color     : #425cbb;
+    border-color         : #425cbb;
+    -webkit-border-radius: 25px;
+    -moz-border-radius   : 25px;
+    border-radius        : 25px;
+}
+
+.footer hr {
+    opacity     : 0.1;
+    filter      : alpha(opacity=10);
+    border-color: #fff;
+}
+
+.footer .link {
+    text-align: right;
+}
+
+.footer .link a {
+    margin-right: 10px;
+}
+
+
+/* 浮动框样式 */
+.cndns-right {
+    position  : fixed;
+    right     : 1px;
+    bottom    : 10%;
+    z-index   : 99;
+    margin-top: -100px;
+    border    : 1px solid #e0e0e0;
+    background: #f1f1f1;
+    opacity   : .9;
+    filter    : alpha(opacity=9)
+}
+
+.cndns-right i {
+    font-style: normal !important
+}
+
+.cndns-right-meau {
+    position: relative
+}
+
+.cndns-right-btn {
+    position       : relative;
+    display        : block;
+    width          : 75px;
+    height         : 80px;
+    border-top     : 1px solid #e0e0e0;
+    text-align     : center;
+    text-decoration: none
+}
+
+.cndns-right-btn:hover {
+    background: #fff
+}
+
+.cndns-right-btn span {
+    color      : #008000;
+    font-size  : 28px !important;
+    line-height: 52px
+}
+
+.cndns-right-btn sup {
+    position             : absolute;
+    top                  : -12px;
+    left                 : -12px;
+    display              : block;
+    height               : 24px;
+    min-width            : 24px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    border-radius        : 50%;
+    background-color     : #425cbb;
+    color                : #fff;
+    text-align           : center;
+    line-height          : 24px
+}
+
+.cndns-right-btn p {
+    margin         : 0;
+    padding-top    : 0;
+    padding-bottom : 10px;
+    color          : #333;
+    text-decoration: none;
+    font-size      : 12px;
+    line-height    : 18px
+}
+
+.cndns-right-meau:hover .cndns-right-btn p {
+    display        : block;
+    text-decoration: none
+}
+
+.meau-car .cndns-right-btn {
+    margin-bottom  : 20px;
+    border-color   : #425cbb;
+    text-decoration: none
+}
+
+.meau-car .cndns-right-meau:hover .cndns-right-btn {
+    background-color: #425cbb;
+    text-decoration : none
+}
+
+.meau-car .cndns-right-meau:hover .cndns-right-btn span {
+    display        : block;
+    color          : #fff;
+    text-decoration: none
+}
+
+.meau-code .sev-t img {
+    margin : 0;
+    padding: 0;
+    width  : 134px;
+    height : 134px
+}
+
+.meau-car .cndns-right-btn span {
+    color: #425cbb
+}
+
+.meau-top .cndns-right-btn span {
+    padding-top: 10px;
+    font-size  : 24px !important;
+    line-height: 38px
+}
+
+.meau-top .cndns-right-btn i {
+    display  : block;
+    color    : #333;
+    font-size: 12px
+}
+
+.cndns-right-box {
+    position     : absolute;
+    top          : -15px;
+    right        : 62px;
+    display      : none;
+    padding-right: 25px
+}
+
+.cndns-right-box .box-border {
+    position          : relative;
+    overflow          : hidden;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing   : content-box;
+    box-sizing        : content-box;
+    padding           : 20px;
+    border            : 1px solid #f1f1f1;
+    border-top        : 4px solid #425cbb;
+    background-color  : #fff;
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+    -moz-box-shadow   : 0 3px 8px rgba(0, 0, 0, .15);
+    box-shadow        : 0 3px 8px rgba(0, 0, 0, .15)
+}
+
+.cndns-right-box .box-border .sev-t span {
+    float       : left;
+    display     : block;
+    margin-right: 20px;
+    color       : #d3d3d3;
+    font-size   : 42px;
+    line-height : 56px
+}
+
+.cndns-right-box .box-border .sev-t p {
+    float      : left;
+    margin     : 0;
+    padding    : 0;
+    color      : #425cbb;
+    font-size  : 22px;
+    line-height: 28px
+}
+
+.cndns-right-box .box-border .sev-t p i {
+    display   : block;
+    color     : #888;
+    font-style: normal !important;
+    font-size : 14px
+}
+
+.cndns-right-box .box-border .sev-b {
+    margin-top : 15px;
+    padding-top: 15px;
+    border-top : 1px solid #e4e4e4
+}
+
+.cndns-right-box .box-border .sev-b h4 {
+    padding-bottom: 15px;
+    color         : #666;
+    font-weight   : 400;
+    font-size     : 14px
+}
+
+.cndns-right-box .box-border .sev-b ul {
+    margin    : 0;
+    padding   : 0;
+    list-style: none
+}
+
+.cndns-right-box .box-border .sev-b li {
+    float: left;
+    width: 50%
+}
+
+.cndns-right-box .box-border .sev-b li a {
+    display     : inline-block;
+    padding-left: 43px;
+    background  : url(../images/zxqq.png) no-repeat left 3px;
+    color       : #888;
+    font-size   : 14px;
+    line-height : 36px
+}
+
+.cndns-right-box .box-border .sev-b li a:hover {
+    color: #425cbb
+}
+
+.meau-sev .cndns-right-box .box-border {
+    width: 300px
+}
+
+.meau-contact .cndns-right-box .box-border {
+    width: 230px
+}
+
+.cndns-right-meau:hover .cndns-right-box {
+    display: block
+}
+
+.meau-code .cndns-right-box {
+    top   : inherit;
+    bottom: -35px
+}
+
+.meau-code .cndns-right-box .box-border {
+    width     : 156px;
+    text-align: center
+}
+
+.meau-code .cndns-right-box .box-border i {
+    display    : block;
+    color      : #666;
+    font-size  : 14px;
+    line-height: 22px
+}
+
+.meau-code .cndns-right-box .box-border .arrow-right {
+    top   : inherit;
+    bottom: 50px
+}
+
+.meau-zs .cndns-right-btn {
+    margin-top      : 80px;
+    border-color    : #425cbb;
+    background-color: #425cbb;
+    color           : #fff
+}
+
+.meau-zs .cndns-right-btn span {
+    color: #fff
+}
+
+.meau-zs .cndns-right-btn p {
+    color: #fff
+}
+
+.sev-t {
+    overflow: hidden
+}
+
+
+
+@media (max-width: 767px) {
+
+    .footer {
+        text-align : center;
+        padding-top: 50px;
+    }
+}

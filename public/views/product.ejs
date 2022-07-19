@@ -1,0 +1,119 @@
+<div class="product">
+    <div class="banner text-center " style="background-image: url(<%=$root%>img/webcase.jpg)">
+        <div class="container">
+            <h1>产品中心</h1>
+        </div>
+    </div>
+
+    <div style="padding: 2rem;">
+        当前位置：<span onclick="openPage('/')" style="color:cornflowerblue; cursor:pointer;">首页</span> > 产品中心
+    </div>
+    <div class="tab" style="margin: 3rem;">
+        <div class="category">
+            <ul>
+                <li class="active" onclick="changeTab(0)">阻燃板</li>
+                <li onclick="changeTab(1)">生态板</li>
+                <li onclick="changeTab(2)">细木工</li>
+            </ul>
+        </div>
+        <div class="cont active">
+            <div class="contact">
+                <% for (let i=0; i< product.length; i++) { let {name, image, title,type }=product[i]; if( i>7) break;
+                    %>
+                    <div class="col-xs-12 col-sm-6 col-md-3" data-aos="zoom-in">
+                        <img src="<%=$root%>img/product/<%=type%>/<%=image%>">
+                        <div class="title">
+                            <%=title%>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="contact">
+                <% for (let i=0; i< product.length; i++) { let {name, image, title,type }=product[i]; if( i>7) break;
+                    %>
+                    <div class="col-xs-12 col-sm-6 col-md-3" data-aos="zoom-in">
+                        <img src="<%=$root%>img/product/<%=type%>/<%=image%>">
+                        <div class="title">
+                            <%=title%>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="contact">
+                <% for (let i=0; i< product.length; i++) { let {name, image, title,type }=product[i]; if( i>7) break;
+                    %>
+                    <div class="col-xs-12 col-sm-6 col-md-3" data-aos="zoom-in">
+                        <img src="<%=$root%>img/product/<%=type%>/<%=image%>">
+                        <div class="title">
+                            <%=title%>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="clear:both;">
+    <nav aria-label="...">
+        <ul class="pager">
+            <li>
+                <% if(pageStart<=0){%>
+                    <a href="#" style="pointer-events: none; color: darkgrey;">上一页</a>
+                    <% } else {%>
+                        <a href="#" onclick="perPage()">上一页</a>
+                        <% } %>
+            </li>
+            <li>
+                <% if(pageStart>=(pageCount-1)){%>
+                    <a href="#" style="pointer-events: none; color: darkgrey;">下一页</a>
+                    <% } else {%>
+                        <a href="#" onclick="nextPage()">下一页</a>
+                        <% } %>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        //选项卡切换
+        $('.tab ul li').click(function () {
+            indexC = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.cont').eq(indexC).addClass('active').siblings().removeClass('active');
+        })
+
+        var index = getQueryString("type");
+        $('.tab ul li').eq(index).addClass('active').siblings().removeClass('active');
+    })
+
+    //获取参数
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+    function changeTab(type) {
+        window.location.replace("/product?type=" + type);
+    }
+
+    function perPage() {
+        var type = getQueryString("type");
+        var page = getQueryString("pageStart") === null ? 0 : getQueryString("pageStart");
+        window.location.replace("/product?type=" + type + "&pageStart=" + (parseInt(page) - 1));
+    }
+
+    function nextPage() {
+        var type = getQueryString("type");
+        var page = getQueryString("pageStart") === null ? 0 : getQueryString("pageStart");
+        window.location.replace("/product?type=" + type + "&pageStart=" + (parseInt(page) + 1));
+    }
+
+
+</script>

@@ -1,0 +1,249 @@
+/*整体样式*/
+html {
+    -ms-text-size-adjust    : 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing  : antialiased;
+}
+
+body {
+    font-family     : "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    min-width       : 320px;
+    background-color: #f8f8f8;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* 模块样式 */
+/* .section {
+    padding         : 50px 0;
+    background-color: white;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    width        : 100%;
+    text-align   : center;
+}
+
+.section-title h3 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 30px;
+    margin   : 0 0 20px;
+} */
+
+/* 段落样式 */
+.paragraph p {
+    /* font: 100%/1.6 Verdana, Geneva, Arial, Helvetica, sans-serif; */
+    font-family   : 仿宋, SimSun;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size     : 17px;
+    white-space   : normal;
+    color         : rgb(31, 73, 125);
+}
+
+.paragraph p:first-letter {
+    color         : rgb(31, 73, 125);
+    display       : inline;
+    float         : left;
+    font          : 2.1em Georgia, arial;
+    text-transform: uppercase;
+    margin        : 0 0.12em 0 0
+}
+
+/* 普通图片样式  */
+.mypicture {
+    padding   : 0;
+    text-align: center;
+    position  : relative;
+    /* 添加阴影 */
+    box-shadow: 0px 0px 10px #000;
+    /* 边框 */
+    border    : solid 0px #ffffff;
+    /* 配合悬停慢慢变大 不超出边框*/
+    overflow  : hidden;
+}
+
+.mypicture img {
+    width     : 100%;
+    cursor    : pointer;
+    /* 配合悬停慢慢变大 */
+    transition: all 0.6s;
+}
+
+/* 鼠标悬停图片放大 */
+.mypicture img:hover {
+    background: url();
+    display   : block;
+    transform : scale(1.1)
+}
+
+/* 标题修饰图片样式 */
+.mod-image {
+    width    : 100%;
+    max-width: 400px;
+}
+
+
+/* 友情链接 */
+.city {
+    overflow: hidden;
+}
+
+.city h3 {
+    float      : left;
+    font-size  : 15px;
+    line-height: 78px;
+    margin     : 0;
+}
+
+.city .flink_list {
+    float: left;
+}
+
+.city li {
+    list-style: none;
+    float     : left;
+}
+
+.city li a {
+    margin-right: 15px;
+    font-size   : 14px;
+    color       : #666;
+    line-height : 78px;
+}
+
+.city li a:hover {
+    color: #425cbb;
+}
+
+
+/* 标题 */
+.banner {
+    padding             : 180px 0;
+    background          : no-repeat center center;
+    -moz-background-size: cover;
+    background-size     : cover;
+    color               : #fff;
+    position            : relative;
+}
+
+.banner:before {
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: #000;
+    opacity         : 0.5;
+    content         : '';
+    filter          : alpha(opacity=50);
+}
+
+.banner .container {
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 60px;
+    margin   : 0 0 30px;
+}
+
+.banner .lead {
+    margin : 0;
+    opacity: 0.9;
+    filter : alpha(opacity=90);
+}
+
+.banner .btn {
+    border-color         : rgba(255, 255, 255, 0.1);
+    font-size            : 12px;
+    color                : #fff;
+    padding              : 10px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius   : 20px;
+    border-radius        : 20px;
+    border-width         : 2px;
+    margin               : 20px 10px 0;
+}
+
+.banner .btn:hover {
+    border-color: #fff;
+}
+
+
+/* 联系我们 */
+/* 联系我们 */
+.baidumap {
+    min-height: 434px;
+    min-width : 800px;
+}
+
+
+
+@media (max-width: 767px) {
+
+    /* .section {
+        padding: 70px 0;
+    } */
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .lead {
+        font-size: 14px;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+
+    }
+
+    /* .section-news .section-title h3 {
+        font-size: 26px;
+    }
+
+    .section-news .section-title small {
+        font-size: 12px;
+    } */
+
+    /* 手机下的段落样式 */
+    .paragraph p:first-letter {
+        color         : rgb(31, 73, 125);
+        display       : inline;
+        float         : left;
+        /* 首字下沉 */
+        font          : 1em Georgia, arial;
+        text-transform: uppercase;
+        margin        : 0 0.12em 0 0
+    }
+
+    .mypicture {
+        margin: 3rem;
+    }
+
+    /* 标题 */
+
+    .banner {
+        padding: 50px 0;
+    }
+
+    .banner h1 {
+        font-size    : 30px;
+        margin-bottom: 10px;
+    }
+
+    /* 联系我们 */
+    .baidumap {
+        min-height: 434px;
+        min-width : 350px;
+    }
+    
+
+}

@@ -1,0 +1,98 @@
+/* 此类为自定义类 */
+.owl-banner .item {
+    position: relative;
+    height  : 100vh;
+}
+
+.owl-banner .item:before {
+    position        : absolute;
+    left            : 0;
+    top             : 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: #000;
+    content         : '';
+    z-index         : 1;
+    opacity         : 0.4;
+    filter          : alpha(opacity=40);
+}
+
+.owl-banner .item .bg {
+    position            : absolute;
+    left                : 0;
+    top                 : 0;
+    width               : 100%;
+    height              : 100%;
+    background          : no-repeat center center;
+    -moz-background-size: cover;
+    background-size     : cover;
+}
+
+.owl-banner .item .container {
+    position: relative;
+    z-index : 1;
+    display : table;
+    height  : 100%;
+    color   : #fff;
+}
+
+.owl-banner .item .wrap {
+    display       : table-cell;
+    vertical-align: middle;
+}
+
+.owl-banner .item h1 {
+    margin   : 0 0 20px;
+    font-size: 60px;
+}
+
+.owl-banner .item .btn {
+    border-color         : #425cbb;
+    background           : #425cbb;
+    color                : #fff;
+    padding              : 14px 50px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius   : 30px;
+    border-radius        : 30px;
+}
+
+.owl-banner .item .btn:hover {
+    border-color    : #546cc3;
+    background-color: #546cc3;
+}
+
+.owl-banner .owl-pagination {
+    position: absolute;
+    bottom  : 50px;
+    left    : 0;
+    width   : 100%;
+}
+
+.owl-banner .owl-pagination .owl-page.active span {
+    background-color: #fff;
+}
+
+
+@media (max-width: 767px) {
+    .owl-banner .item {
+        height: 300px;
+    }
+
+    .owl-banner .item h1 {
+        font-size    : 24px;
+        margin-bottom: 10px;
+    }
+
+    .owl-banner .item .lead {
+        font-size: 14px;
+    }
+
+    .owl-banner .owl-pagination {
+        bottom: 20px;
+    }
+
+    .owl-banner .item .btn {
+        padding  : 8px 50px;
+        font-size: 12px;
+    }
+}

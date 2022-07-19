@@ -1,0 +1,234 @@
+/* 内容宽度  开始 */
+
+
+/* 此样式在 bootstrap.css 设置*/
+
+.index .about .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 767px) {
+    .index .about .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .index .about .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .index .about .container {
+        width: 95%;
+    }
+}
+
+
+/* 内容宽度  结束 */
+
+
+/* 内容标题  开始 */
+
+.index .about .title {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.index .about .title h3 {
+    font-size: 4rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+@media (max-width: 767px) {
+    .index .about .title h3 {
+        font-size: 2rem;
+    }
+}
+ 
+
+
+/* 段落样式 开始 */
+
+.index .about .paragraph {
+    width: 90%;
+}
+
+.index .about .paragraph p {
+    /* font       : 100%/1.6 Verdana, Geneva, Arial, Helvetica, sans-serif; */
+    font-family: 微软雅黑, 'Microsoft YaHei';
+    color: #8a8a8a;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 14px;
+    white-space: normal;
+    text-indent: 2em;
+}
+
+.index .about .paragraph .title {
+    text-align: center; width: 100%; padding: 4rem;font-weight: 600; color: #8a8a8a; font-size: 4rem;
+}
+
+
+@media (max-width: 767px) {
+    .index .about .paragraph .title {
+        padding: 1rem; font-size: 2rem;
+    }
+}
+ 
+
+
+/* 段落样式 结束 */
+
+@media (max-width: 767px) {
+    .index .about .lead {
+        font-size: 14px;
+    }
+    .index .about .title {
+        margin-bottom: 20px;
+    }
+    .index .about .news .title h3 {
+        font-size: 26px;
+    }
+    .index .about .news .title small {
+        font-size: 12px;
+    }
+    .index .about .paragraph {
+        width: 100%;
+    }
+}
+
+
+/* 内容标题  结束 */
+
+.index .about-wrap {
+    background: #f5f5f5;
+}
+
+.index .about-wrap dl {
+    display: table-cell;
+    width: 25%;
+    padding: 60px 0 51px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.index .about-wrap dl:before {
+    content: '';
+    position: absolute;
+    height: 140px;
+    right: 0;
+    width: 1px;
+    background: #dbdada;
+}
+
+.index .about-wrap dd {
+    text-align: center;
+}
+
+.index .about-wrap dl:last-child:before {
+    width: 0
+}
+
+.index .about-wrap dd b {
+    color: #2c276e;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: DIN Condensed;
+    position: relative;
+}
+
+.index .about-wrap dd b:before {
+    content: '+';
+    position: absolute;
+    right: -36px;
+    top: 0;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.index .about-wrap dd span {
+    color: #615f5c;
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+.index .about-wrap dt {
+    text-align: center;
+    font-size: 14px;
+    color: #615f5c;
+}
+
+@media screen and (max-width: 1000px) {
+    .index .about-wrap dl:last-child:before,
+    .index .about-wrap dl:nth-child(2):before {
+        width: 0
+    }
+    .index .about-wrap dd b {
+        color: #2c276e;
+        font-size: 40px;
+        font-weight: 500;
+        font-family: fantasy;
+        position: relative;
+    }
+    .index .about-wrap dd span {
+        color: #615f5c;
+        font-size: 10px;
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .container {
+        width: 96%;
+    }
+    .index .about-wrap dl {
+        width: 50%;
+        padding: 1rem 0;
+        position: relative;
+        box-sizing: border-box;
+    }
+    .index .about-wrap dl:before {
+        content: '';
+        position: absolute;
+        height: 5.4rem;
+        right: 0;
+        width: 1px;
+        background: #dbdada;
+    }
+    .index .about-wrap dd {
+        text-align: center;
+    }
+    .index .about-wrap dl:last-child:before,
+    .index .about-wrap dl:nth-child(2):before {
+        width: 0
+    }
+    .index .about-wrap dd b {
+        color: #2c276e;
+        font-size: 32px;
+        font-weight: 100;
+        font-family: fantasy;
+        position: relative;
+    }
+    .index .about-wrap dd b:before {
+        content: '+';
+        position: absolute;
+        right: -20px;
+        top: -10px;
+        font-size: 29px;
+        font-weight: bold;
+    }
+    .index .about-wrap dd span {
+        color: #615f5c;
+        font-size: 12px;
+        margin-left: 12px;
+    }
+}

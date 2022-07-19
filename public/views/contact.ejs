@@ -1,0 +1,131 @@
+<div class="contact">
+    <div class="banner text-center" style="background-image: url(<%=$root%>img/webcase.jpg)">
+        <div class="container">
+            <h1>联系我们</h1>
+        </div>
+    </div>
+    <div style="padding: 2rem;">
+        当前位置：<span onclick="openPage('/')" style="color:cornflowerblue; cursor:pointer;">首页</span> > 联系我们
+    </div>
+
+    <div class="contact">
+        <!-- style="background-image:  url(<%=$root%>img/xiushi.jpg); background-size:100% 100% ; background-attachment: fixed" -->
+        <div class="container">
+            <div class="row">
+
+           
+                <div class="col col-md-4  col-sm-12">
+                    <table class="tables">
+                        <tr>
+                            <td colspan="2" style="font-weight: 900;"> 山东一是一木业有限公司</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align-last: justify;"> 联系人：</td>
+                            <td>王彦昌（总经理）</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align-last: justify;"> 联系电话：</td>
+                            <td>13665309999</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align-last: justify;"> 热线电话：</td>
+                            <td>0530-2061299</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align-last: justify;"> 传真：</td>
+                            <td>0530-2061399</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align-last: justify;"> 地址：</td>
+                            <td>山东庄寨工业园</td>
+                        </tr>
+                       
+                    </table>
+                    <div style="margin:2rem;">
+                        <div class="logo text-center"
+                            style="background-color: white; padding: 1rem; border:1px solid rgb(194, 192, 192) ">
+                            <img src="<%=$root%>img/erweima.png" alt="">
+                            <div style="font-weight: 900; color: black;">微信二维码</div>
+                        </div>
+
+                        <div class="logo text-center"
+                            style="background-color: white;  padding: 1rem; border:1px solid  rgb(194, 192, 192); margin-left: 2rem; ">
+                            <img src="<%=$root%>img/erweima2.png" alt="">
+                            <div style="font-weight: 900; color: black;">手机端网址</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col col-md-8  col-sm-12">
+                    <div id="allmap" class="baidumap"> </div>
+                </div>
+ 
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var map, marker;
+    initMap();
+
+    //创建和初始化地图函数：
+    function initMap() {
+        // [FF]切换模式后报错
+        if (!window.BMap) {
+            return;
+        }
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+
+        // 创建标注
+        var point = new BMap.Point(115.204992, 34.998159);
+        marker = new BMap.Marker(point);
+        //marker.enableDragging(); //可拖拽标点
+        map.addOverlay(marker); // 将标注添加到地图中
+
+        // 创建信息窗口
+        var opts = {
+            width: 300,
+            height: 80,
+            title: '<div  style=" text-align: center;">山东一是一木业有限公司</div>'
+
+        };
+        var infoWindow = new BMap.InfoWindow('<div style="text-align: center; padding-top: 2rem; padding: 2rem;">地址：山东庄寨工业园</div>', opts);
+        map.openInfoWindow(infoWindow, point); // 开启信息窗口
+        // 点标记添加点击事件
+        marker.addEventListener('click', function () {
+            map.openInfoWindow(infoWindow, point); // 开启信息窗口
+        });
+
+    }
+
+    //创建地图函数：
+    function createMap() {
+        map = new BMap.Map("allmap");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(115.204992, 34.998159);//定义一个中心点坐标
+        map.centerAndZoom(point, 13);//设定地图的中心点和坐标并将地图显示在地图容器中
+    }
+    //地图事件设置函数：
+    function setMapEvent() {
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+
+    //地图控件添加函数：
+    function addMapControl() {
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+        map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+        var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+        map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+        var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+        map.addControl(ctrl_sca);
+    }
+
+</script>

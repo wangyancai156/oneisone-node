@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)http://demoall.dedecms58.com/42935/anlizhongxin/list_3_1.html -->
+<html lang="zh-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <meta name="Description"
+        content="山东一是一木业有限公司组建于1998年，经过多年的磨练，克服了种种困难，打造出先进的管理流程、造就了一批精干的管理队伍、培养了一批技能精湛员工，引进先进的生产设备，建有细木工板车间、生态板车间。">
+    <meta name="Keywords" content="山东生态板厂家|细木工板|山东实木贴面板厂家|山东一是一木业">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>一是一木业</title>
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="applicable-device" content="pc,wap">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+
+    <link rel="stylesheet" href="./files/css/index.css">
+    <!-- <link rel="stylesheet" href="./files/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./files/css/bootstrap.css">
+    <link rel="stylesheet" href="./files/css/owl.carousel.css">
+    <link rel="stylesheet" href="./files/css/style.css"> -->
+    <script src="./files/js/jquery-1.11.0.min.js"></script>
+    <script src="./files/js/owl.carousel.min.js"></script>
+    <script src="./files/js/app.js"></script>
+    <script src="./files/js/yh.js"></script>
+    <script type="text/javascript"
+        src="https://api.map.baidu.com/api?v=2.0&ak=TdWoDPwuvntGbqMCw5wUPOnYB3FVktRk"></script>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+    <!-- uni 的 SDK，必须引用.-->
+    <script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+
+
+</head>
+
+<body>
+    <script type="text/javascript" src="./files/js/header.js"></script>
+
+    <div class="banner text-center" style="background-image: url(./files/image/webcase.jpg)">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p class="lead">匠心为您打造精品板材</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <!-- style="background-image:  url(./files/image/xiushi.jpg); background-size:100% 100% ; background-attachment: fixed" -->
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h3>企业名片</h3>
+                    <h3 style="color: darkgray;">About us</h3>
+                    <img class="mod-image" src="./files/image/biaoti.png" />
+                </div>
+                <div class="col col-md-4   col-sm-12">
+                    <div class="paragraph">
+                        <p> 山东一是一木业有限公司是山东曹县重要的木材加工企业。公路、铁路纵横交错，四通八达，交通十分便利。公司组建于1998年，经过多年的磨练，克服了种种困难，打造出先进的管理流程、造就了一批精干的管理队伍、培养了一批技能精湛员工，引进先进的生产设备，建有细木工板车间、生态板车间。产品选用优良桐木为原料，经过锯切、旋切、压刨、烘干，热压胶和，砂光等多种先进的工艺流程，年生产量达150万张。
+                        </p>
+                        <p>
+                            我公司专业生产各种规格细木工板，生态板。我公司生产的“一是一”牌细木工板被多家省内外装饰公司及家具厂等用户列为指定用板，受到客户好评，获得广大客商的信赖和认可。我公司一直恪守“质量为先，信誉至上”的经营宗旨，竭诚为新老客户服务。公司总经理王彦昌热忱欢迎广大客户到我公司考察、参观、指导。
+                        </p>
+                    </div>
+                </div>
+                <div class="col col-md-8  col-sm-12">
+                    <div id="allmap" class="baidumap" > </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="allmap" class="item 8" style="width: 40%; float: initial;" > </div> -->
+
+
+    <script>
+        var map, marker;
+        initMap();
+
+        //创建和初始化地图函数：
+        function initMap() {
+            // [FF]切换模式后报错
+            if (!window.BMap) {
+                return;
+            }
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+
+            // 创建标注
+            var point = new BMap.Point(115.204992, 34.998159);
+            marker = new BMap.Marker(point);
+            //marker.enableDragging(); //可拖拽标点
+            map.addOverlay(marker); // 将标注添加到地图中
+
+            // 创建信息窗口
+            var opts = {
+                width: 300,
+                height: 80,
+                title: '<div  style=" text-align: center;">山东一是一木业有限公司</div>'
+
+            };
+            var infoWindow = new BMap.InfoWindow('<div style="text-align: center; padding-top: 2rem; padding: 2rem;">地址：山东曹县庄寨镇工业园</div>', opts);
+            map.openInfoWindow(infoWindow, point); // 开启信息窗口
+            // 点标记添加点击事件
+            marker.addEventListener('click', function () {
+                map.openInfoWindow(infoWindow, point); // 开启信息窗口
+            });
+
+        }
+
+        //创建地图函数：
+        function createMap() {
+            map = new BMap.Map("allmap");//在百度地图容器中创建一个地图
+            var point = new BMap.Point(115.204992, 34.998159);//定义一个中心点坐标
+            map.centerAndZoom(point, 13);//设定地图的中心点和坐标并将地图显示在地图容器中
+        }
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard();//启用键盘上下左右键移动地图
+        }
+
+        //地图控件添加函数：
+        function addMapControl() {
+            //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+            var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+            map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+            var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            map.addControl(ctrl_sca);
+        }
+
+    </script>
+
+    <script type="text/javascript" src="./files/js/footer.js"></script>
+
+</body>
+
+</html>

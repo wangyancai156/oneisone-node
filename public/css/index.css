@@ -1,0 +1,21 @@
+@import './awesome/css/font-awesome.min.css';
+@import './bootstrap/css/bootstrap.min.css';
+@import './aos/aos.css';
+@import './owl/owl.carousel.css';
+
+@import 'page-styel.css';
+@import 'menu-styel.css';
+
+@import 'footer-style.css';
+@import 'animate.min.css';
+
+@import './index/index.css';
+@import './about/index.css';
+@import './product/index.css';
+@import './strength/index.css';
+@import './contact/index.css'; 
+@import './news/index.css'; 
+
+
+
+ 

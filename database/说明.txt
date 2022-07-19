@@ -1,0 +1,4 @@
+还原方法：
+1、新建数据库 oneisone, 类型  CHARSET=utf8mb4   COLLATE=utf8mb4_bin 
+
+2、右键数据库 运行SQL文件 ，  选中此文件执行即可

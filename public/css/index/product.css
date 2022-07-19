@@ -1,0 +1,127 @@
+/* 内容宽度  开始 */
+
+
+/* 此样式在 bootstrap.css 设置*/
+
+.index .product {
+    margin: 0 0 2rem 0;
+}
+
+.index .product .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .index .product .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .index .product .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .index .product .container {
+        width: 95%;
+    }
+}
+
+
+/* 内容宽度  结束 */
+
+
+/* 内容标题  开始 */
+
+.index .product .title {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.index .product .title h3 {
+    font-size: 4rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+@media (max-width: 767px) {
+    .index .product .title h3 {
+        font-size: 2rem;
+    }
+}
+
+.index .product .tab{
+    width: 50%; margin-right: auto; margin-left: auto; font-size: 20px; margin-top: 1.5rem;
+}
+
+
+/* 内容标题  结束 */
+
+
+/* 图片展示 开始 */
+
+.index .product .content {
+    margin-top: 20px;  
+    padding-top: 3rem;
+}
+
+
+.index .product .content img {
+    width: 100%;
+    height: 100%;
+}
+
+.index .product .content div {
+   padding: 0.3rem;
+}
+
+
+/*product-wrap*/
+
+.index .product-wrap {
+    /* font-size:0.8rem; */
+    padding: 3rem 5rem 5rem 5rem;
+}
+
+.index .product-wrap h3 {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0.2rem;
+    padding: 0 0 5px 0;
+    text-align: center;
+}
+
+.index .product-wrap .item {
+    margin: 2rem 0;
+}
+ 
+.index .product-wrap .item img{
+    width: 8%; height: 8%;
+}
+
+.index .product-wrap .item div {
+    font-size: 1.2rem;
+}
+ 
+
+/* 图片展示 结束 */
+
+@media (max-width: 767px) {
+    .index .product .tab{
+      width: 60%;  margin-right: auto; margin-left: auto; font-size: 15px; margin-top: 1.5rem; font-weight: 900;
+   }
+
+   .index .product-wrap .item img{
+    width: 16%; height: 16%;
+}
+   
+}

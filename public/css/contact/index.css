@@ -1,0 +1,134 @@
+/* 整页面  开始 */
+
+
+/* 此样式在 bootstrap.css 设置*/
+
+.contact .contact .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contact .contact .tables  {
+    margin: 2rem;
+}
+.contact .contact .tables td {
+    padding: 0.6rem;
+    font-size: 1.8rem;
+
+    /*text-shadow:black 5px 6px 7px*/
+}
+
+
+.contact .logo {
+    display      : inline-block;
+    margin-bottom: 20px;
+}
+
+.contact .logo img {
+    height: 100px;
+    width : auto;
+}
+
+
+@media (min-width: 767px) {
+    .contact .contact .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact .contact .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact .contact .container {
+        width: 95%;
+    }
+}
+/*整页面  结束 */
+
+
+/* 内容标题  开始 */
+
+.contact .contact .title {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.contact .contact .title h3 {
+    font-size: 4rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    color: #8a8a8a;
+}
+ 
+/* 段落样式 开始 */
+
+.contact .contact .paragraph {
+    width: 90%;
+}
+.contact .contact .paragraph p {
+    /* font       : 100%/1.6 Verdana, Geneva, Arial, Helvetica, sans-serif; */
+    font-family: 微软雅黑, 'Microsoft YaHei';
+    color: #050505;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 16px;
+    white-space: normal;
+    text-indent: 2em;
+    padding: 0.7rem;
+}
+
+.contact .contact .paragraph .title {
+    text-align: center; width: 100%; padding: 4rem;font-weight: 600; color: #8a8a8a; font-size: 4rem;
+}
+
+ 
+
+/* 段落样式 结束 */
+
+@media (max-width: 767px) {
+    .contact .contact .lead {
+        font-size: 14px;
+    }
+    .contact .contact .title {
+        margin-bottom: 20px;
+    }
+    .contact .contact .title h3 {
+        font-size: 2rem;
+    }
+    .contact .contact .paragraph {
+        width: 100%;
+    }
+    .contact .contact .paragraph .title {
+        padding: 1rem; font-size: 2rem;
+    }
+}
+ 
+/* 生产实力 */
+ 
+.contact .contact .minimage {
+    width: 25%;
+    float: left;
+    padding: 1px;
+}
+.contact .contact .minimage img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 767px) {
+ 
+    .contact .contact .minimage {
+        width: 48.6%;
+        float: left;
+        padding: 1px;
+    }
+}

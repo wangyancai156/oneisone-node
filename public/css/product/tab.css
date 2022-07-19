@@ -1,0 +1,30 @@
+
+.product .tab .category ul {
+	text-align: center;
+}
+
+.product .tab .category ul li {
+	display: table-cell;
+	white-space: nowrap;
+	font-size: 14px;
+	text-align: center;
+	border-bottom: 3px solid transparent;
+	cursor: pointer;
+	position: relative;
+	padding: 18px 25px;
+	display:inline;
+}
+
+.product .tab .category ul li.active {
+	border-bottom-color: #00a4ff;
+	color: #00a4ff;
+}
+
+.product .tab .cont {
+	display: none;
+}
+
+.product .tab .cont.active {
+	display: block;
+}
+ 

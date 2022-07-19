@@ -1,0 +1,133 @@
+/* 内容宽度  开始 */
+
+
+/* 此样式在 bootstrap.css 设置*/
+
+.index .engineetring {
+    margin: 0 0 2rem 0;
+}
+
+.index .engineetring .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .index .engineetring .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .index .engineetring .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .index .engineetring .container {
+        width: 95%;
+    }
+}
+
+
+/* 内容宽度  结束 */
+
+
+/* 内容标题  开始 */
+
+.index .engineetring .title {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.index .engineetring .title h3 {
+    font-size: 4rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+@media (max-width: 767px) {
+    .index .engineetring .title h3 {
+        font-size: 2rem;
+    }
+}
+
+
+/* 内容标题  结束 */
+
+
+/* 图片展示 开始 */
+
+.index .engineetring .content {
+    margin-top: 20px;
+    margin-bottom: 13%;
+}
+
+.index .engineetring .content .maximage {
+    width: 50%;
+    float: left;
+    padding: 2px;
+}
+
+.index .engineetring .content .minimage {
+    width: 25%;
+    float: left;
+    padding: 2px;
+}
+
+.index .engineetring .content img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*product-wrap*/
+
+.index .engineetring-wrap {
+    /* font-size:0.8rem; */
+    padding: 3rem 5rem 5rem 5rem;
+}
+
+.index .engineetring-wrap h3 {
+    font-size: 1.2rem;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 5px 0;
+    text-align: center;
+}
+
+.index .engineetring-wrap ul li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.index .engineetring-wrap ul li img {
+    /* width : 100%; */
+    /* height: 100%; */
+    width: 23px;
+    margin: 0 auto;
+}
+
+
+/* 图片展示 结束 */
+
+@media (max-width: 767px) {
+    .index .engineetring .content .maximage {
+        width: 99%;
+        float: left;
+        margin: 0.2rem;
+    }
+    .index .engineetring .content .minimage {
+        width: 48.6%;
+        float: left;
+        margin: 0.2rem;
+    }
+}

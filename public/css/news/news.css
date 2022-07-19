@@ -1,0 +1,53 @@
+/* 整页面  开始 */
+
+
+/* 此样式在 bootstrap.css 设置*/
+
+.news .news .container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+@media (min-width: 767px) {
+    .news .news .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .news .news .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .news .news .container {
+        width: 95%;
+    }
+}
+/*整页面  结束 */
+
+
+/* 内容标题  开始 */
+
+.news .news .title {
+    width: 100%;
+    padding: 3rem;
+}
+
+.news .news .texts {
+    width: 92%;
+    margin: 3rem;
+    padding-bottom: 3rem;
+    overflow: hidden; text-overflow:ellipsis; white-space: nowrap;
+}
+.news .news .content {
+    border-bottom: 1px solid #eee;
+}
+
+.news .news .content:hover {
+    background:darkgray;
+}
+

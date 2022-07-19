@@ -1,0 +1,27 @@
+{
+    "port": 6061,
+    "name": "web",
+    "interval": 3000,
+    "database": "DB-TEST-1",
+    "test":false,
+    "connection-test": {
+        "host": "47.104.235.193",
+        "user": "wangyc",
+        "password": "liwenwen851126"
+    },
+    "connection": {
+        "host": "47.104.235.193",
+        "user": "wangyc",
+        "password": "liwenwen851126"
+    },
+    "db": {
+        "content": {
+            "database": "wangyc",
+            "connection": "connection"
+        } 
+    },
+    "CHINESE": 196,
+    "MSCUPath": "/data/website/MSCU/",
+
+    "ex": "null"
+}

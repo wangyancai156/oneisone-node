@@ -1,0 +1,15 @@
+ 
+.product .contact {
+    margin-top: 3rem;
+    text-align: center;
+}
+.product .contact  img {
+    width: 100%;
+    height: 100%;
+}
+
+.product .contact  .title {
+    width: 100%;
+    padding: 2rem;
+    font-weight:900;
+}

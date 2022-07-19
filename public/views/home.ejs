@@ -1,0 +1,239 @@
+<div class="index">
+
+    <!-- lunbo -->
+    <div class="owl-carousel owl-banner owl-theme" style="display: block; opacity: 1;">
+        <% for(var i=0;i<swiper.length;i++){ let {id, image, title, caption, caption2 }=swiper[i]; if(i==0){ %>
+            <div class="owl-wrapper-outer">
+                <div class="owl-wrapper"
+                    style="width: 5788px; left: 0px; display: block; transition: all 1000ms ease 0s; transform: translate3d(0px, 0px, 0px);">
+                    <div class="owl-item" style="width: 1447px;">
+                        <div class="item">
+                            <div class="bg" style="background-image: url(<%=$root%>img/<%=image%>)">
+                            </div>
+                            <div class="container text-center">
+                                <div class="wrap">
+                                    <h1 style="color: rgb(231, 227, 227);">
+                                        <%=title%>
+                                    </h1>
+                                    <p class="lead"
+                                        style="margin-top: 5%; margin-left: 50%; color: whitesmoke; font-weight: 900; ">
+                                        <%=caption%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% } else { %>
+                <div class="owl-controls clickable">
+                    <div>
+                        <div class="owl-item" style="width: 1447px;">
+                            <div class="item">
+                                <div class="bg" style="background-image: url(<%=$root%>img/<%=image%>)">
+                                </div>
+                                <div class="container text-center">
+                                    <div class="wrap">
+                                        <h1 style="color: rgb(231, 227, 227);">
+                                            <%=title%>
+                                        </h1>
+                                        <p class="lead"
+                                            style="margin-top: 5%; margin-left: 50%; color: whitesmoke; font-weight: 900; ">
+                                            <%=caption%>
+                                        </p>
+                                        <p class="lead"
+                                            style="margin-top: 5%; margin-left: 50%; color: whitesmoke; font-weight: 900; ">
+                                            <%=caption2%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%} } %>
+    </div>
+
+    <!-- about -->
+    <div class="about">
+        <% let {id, image, content, content1, content2 }=about; %>
+            <div class="container">
+                <div class="flex" data-aos="fade-up">
+                    <div class="title">
+                        <h3>企业简介</h3>
+                        <h3 style="color: darkgray;">ABOUT US</h3>
+                        <img class="mod-image" src="<%=$root%>img/biaoti.png" />
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="paragraph">
+                            <div class="title">
+                                始于创新， 精于匠心
+                            </div>
+                            <p>
+                                <%=content%>
+                            </p>
+                            <p>
+                                <%=content1%>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4  mypicture">
+                        <img src="<%=$root%>img/<%=image%>"></img>
+                    </div>
+                </div>
+            </div>
+            <div class="about-wrap flex" data-aos="fade-up">
+                <dl>
+                    <dd><b class="numUp">23</b><span>年</span></dd>
+                    <dt>23年制板经验</dt>
+                </dl>
+                <dl>
+                    <dd><b class="numUp">30</b><span>道</span></dd>
+                    <dt>30多道生产工序</dt>
+                </dl>
+                <dl>
+                    <dd><b class="numUp">150</b><span>万</span></dd>
+                    <dt>年产量达150万张</dt>
+                </dl>
+                <dl>
+                    <dd><b class="numUp">24</b><span>小时</span></dd>
+                    <dt>24小时售后服务</dt>
+                </dl>
+            </div>
+    </div>
+
+    <!-- product -->
+
+
+    <div class="product">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <h3>产品展示</h3>
+                <h3 style="color: darkgray;">PRODUCT CENTER</h3>
+                <img class="mod-image" src="<%=$root%>img/biaoti.png" />
+            </div>
+            <div class="tab" style="width: 100%;" data-aos="fade-up">
+                <div class="category">
+                    <ul>
+                        <li class="active" style=" font-size: 2rem;">阻燃板</li>
+                        <li style=" font-size: 2rem;">生态板</li>
+                        <li style=" font-size: 2rem;">细木工</li>
+                    </ul>
+                </div>
+                <div class="cont active">
+                    <div class="content" style="text-align: center;">
+                        <% for (let i=0; i< product0.length; i++) { let {name, image, type }=product0[i]; if( i>7) break;
+                            %>
+                            <div class="col-xs-6 col-sm-6 col-md-3" data-aos="zoom-in" onclick="openPage('/product?type=0')">
+                                <img src="<%=$root%>img/product/<%=type%>/<%=image%>">
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="content" style="text-align: center;">
+                        <% for (let i=0; i< product1.length; i++) { let {name, image, type }=product1[i]; if( i>7) break;
+                            %>
+                            <div class="col-xs-6 col-sm-6 col-md-3" data-aos="zoom-in" onclick="openPage('/product?type=1')">
+                                <img src="<%=$root%>img/product/<%=type%>/<%=image%>">
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="content" style="text-align: center;">
+                        <% for (let i=0; i< product2.length; i++) { let {name, image, type }=product2[i]; if( i>7) break;
+                            %>
+                            <div class="col-xs-6 col-sm-6 col-md-3" data-aos="zoom-in" onclick="openPage('/product?type=2')">
+                                <img src="<%=$root%>img/product/<%=type%>/<%=image%>">
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-wrap" data-aos="fade-up" style="background-color: #f4f4f4; text-align: center;">
+            <h3>技术创新·引领环保</h3>
+            <h3>INNOVATION &amp; ENVIRONMENTAL PROTECTON
+            </h3>
+            <div class="row">
+                <div class="item col-xs-6 col-sm-6 col-md-3">
+                    <img src="<%=$root%>img/icon/jxx4.jpg"></img>
+                    <div>实力雄厚</div>
+                </div>
+                <div class="item col-xs-6 col-sm-6 col-md-3">
+                    <img src="<%=$root%>img/icon/jxx1.jpg"></img>
+                    <div>先进设备</div>
+                </div>
+                <div class="item col-xs-6 col-sm-6 col-md-3">
+                    <img src="<%=$root%>img/icon/jxx2.jpg"></img>
+                    <div>选材优良</div>
+                </div>
+                <div class="item col-xs-6 col-sm-6 col-md-3">
+                    <img src="<%=$root%>img/icon/jxx3.jpg"></img>
+                    <div>保障质量</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- engineetring -->
+    <div class="engineetring">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <h3>合作案例</h3>
+                <h3 style="color: darkgray;">ENGINEERING CASE</h3>
+                <img class="mod-image" src="<%=$root%>img/biaoti.png" />
+            </div>
+
+            <div class="content" style="width: 100%; text-align: center;">
+
+                <% let { image:image2,type }=engineetring[0]; %>
+                    <div class="maximage" data-aos="flip-left">
+                        <img src="<%=$root%>img/<%=type%>/<%=image2%>">
+                    </div>
+
+                    <% for (let i=1; i< engineetring.length; i++) { let {name, image , type}=engineetring[i]; if( i>4) break;
+                        %>
+                        <div class="minimage" data-aos="fade-up">
+                            <img src="<%=$root%>img/<%=type%>/<%=image%>">
+                        </div>
+                        <% } %>
+            </div>
+        </div>
+    </div>
+
+    <div class="city">
+        <div class="container">
+            <div class="center clearfix">
+                <h3>友情链接：</h3>
+                <div class="flink_list">
+                    <ul>
+                        <li> <a href="http://www.baidu.com/" target="_blank">百度一下</a> </li>
+
+                        <li> <a href="http://www.umutou.com/" target="_blank">优木拓</a> </li>
+
+                        <li> <a href="http://www.yiyongtong.com/" target="_blank">小程序</a> </li>
+
+                        <li> <a href="http://www.umutou.com/" target="_blank">优木头</a> </li>
+
+                        <li> <a href="http://www.taobao.com/" target="_blank">淘宝</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        //选项卡切换
+        $('.tab ul li').click(function () {
+            indexC = $(this).index();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.cont').eq(indexC).addClass('active').siblings().removeClass('active');
+        })
+    })
+</script>
